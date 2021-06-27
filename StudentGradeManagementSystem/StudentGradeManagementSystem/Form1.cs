@@ -25,11 +25,13 @@ namespace StudentGradeManagementSystem
         private void AddGradeFormSubmitButton_Click(object sender, EventArgs e)
         {
             this.AddGradeTableLayoutPanel.Visible = false;
+            
         }
 
         private void SearchGradeSubmitButton_Click(object sender, EventArgs e)
         {
             this.SearchGradeFormTableLayoutPanel.Visible = false;
+            new SearchResultForm().Show();
         }
 
         private void MainMenuSearchButton_Click(object sender, EventArgs e)

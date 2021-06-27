@@ -8,3 +8,4 @@ C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagem
 C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.exe
 C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.pdb
 C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.GradeManagementSystem.resources
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.SearchResultForm.resources
