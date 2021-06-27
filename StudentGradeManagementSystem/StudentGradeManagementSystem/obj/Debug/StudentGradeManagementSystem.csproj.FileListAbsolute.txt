@@ -1,0 +1,10 @@
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\bin\Debug\StudentGradeManagementSystem.exe.config
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\bin\Debug\StudentGradeManagementSystem.exe
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\bin\Debug\StudentGradeManagementSystem.pdb
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.csproj.AssemblyReference.cache
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.Properties.Resources.resources
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.csproj.GenerateResource.cache
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.exe
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.pdb
+C:\Users\kenne\Documents\CSC835\StudentGradeManagementSystem\StudentGradeManagementSystem\obj\Debug\StudentGradeManagementSystem.GradeManagementSystem.resources
