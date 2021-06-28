@@ -30,6 +30,11 @@ namespace StudentGradeManagementSystem
             this.SearchResultsListBox.DisplayMember = "getEntireInfo";
 
         }
+
+        private void SearchResultsDeleteButton_Click(object sender, EventArgs e)
+        {
+            new DynamicConfirmationForm("Are you sure you wish to delete? Warning: Deletion is permanent.").Show();
+        }
     }
     public class GradeResult
     {

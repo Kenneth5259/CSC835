@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicConfirmationForm.Designer.cs">
+      <DependentUpon>DynamicConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicMessageForm.Designer.cs">
+      <DependentUpon>DynamicMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     <Compile Include="SearchResultForm.Designer.cs">
       <DependentUpon>SearchResultForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DynamicConfirmationForm.resx">
+      <DependentUpon>DynamicConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicMessageForm.resx">
+      <DependentUpon>DynamicMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

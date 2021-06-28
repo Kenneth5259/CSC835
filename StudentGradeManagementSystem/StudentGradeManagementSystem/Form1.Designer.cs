@@ -86,6 +86,13 @@ namespace StudentGradeManagementSystem
             this.SearchGradeCoursePrefixInput = new System.Windows.Forms.TextBox();
             this.SearchGradeCourseNumberInput = new System.Windows.Forms.TextBox();
             this.SearchGradeCourseGradeInput = new System.Windows.Forms.TextBox();
+            this.PrintStudentGradeReportTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.PrintStudentGradeReportIDInputTableLayoutArea = new System.Windows.Forms.TableLayoutPanel();
+            this.PrintStudentGradeReportButtonsTableLayoutArea = new System.Windows.Forms.TableLayoutPanel();
+            this.PrintGradeReportPrintButton = new System.Windows.Forms.Button();
+            this.PrintGradeReportGoBackButton = new System.Windows.Forms.Button();
+            this.PrintGradeReportIDInputLabel = new System.Windows.Forms.Label();
+            this.PrintGradeReportStudentIDInput = new System.Windows.Forms.TextBox();
             AddGradeFormSubmitButton = new System.Windows.Forms.Button();
             this.MainMenuTableLayout.SuspendLayout();
             this.AddGradeTableLayoutPanel.SuspendLayout();
@@ -110,6 +117,9 @@ namespace StudentGradeManagementSystem
             this.SearchGradeCoursePrefixInputArea.SuspendLayout();
             this.SearchGradeCourseNumberInputArea.SuspendLayout();
             this.SearchGradeCourseGradeInputArea.SuspendLayout();
+            this.PrintStudentGradeReportTableLayoutPanel.SuspendLayout();
+            this.PrintStudentGradeReportIDInputTableLayoutArea.SuspendLayout();
+            this.PrintStudentGradeReportButtonsTableLayoutArea.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenuTableLayout
@@ -164,6 +174,7 @@ namespace StudentGradeManagementSystem
             this.MainMenuPrintButton.TabIndex = 2;
             this.MainMenuPrintButton.Text = "Print Student Grade Report";
             this.MainMenuPrintButton.UseVisualStyleBackColor = true;
+            this.MainMenuPrintButton.Click += new System.EventHandler(this.MainMenuPrintButton_Click);
             // 
             // MainMenuImportButton
             // 
@@ -802,14 +813,100 @@ namespace StudentGradeManagementSystem
             AddGradeFormSubmitButton.UseVisualStyleBackColor = true;
             AddGradeFormSubmitButton.Click += new System.EventHandler(this.AddGradeFormSubmitButton_Click);
             // 
+            // PrintStudentGradeReportTableLayoutPanel
+            // 
+            this.PrintStudentGradeReportTableLayoutPanel.ColumnCount = 1;
+            this.PrintStudentGradeReportTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PrintStudentGradeReportTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.PrintStudentGradeReportTableLayoutPanel.Controls.Add(this.PrintStudentGradeReportIDInputTableLayoutArea, 0, 0);
+            this.PrintStudentGradeReportTableLayoutPanel.Controls.Add(this.PrintStudentGradeReportButtonsTableLayoutArea, 0, 1);
+            this.PrintStudentGradeReportTableLayoutPanel.Location = new System.Drawing.Point(12, 12);
+            this.PrintStudentGradeReportTableLayoutPanel.Name = "PrintStudentGradeReportTableLayoutPanel";
+            this.PrintStudentGradeReportTableLayoutPanel.RowCount = 2;
+            this.PrintStudentGradeReportTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.PrintStudentGradeReportTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.PrintStudentGradeReportTableLayoutPanel.Size = new System.Drawing.Size(1016, 840);
+            this.PrintStudentGradeReportTableLayoutPanel.TabIndex = 5;
+            this.PrintStudentGradeReportTableLayoutPanel.Visible = false;
+            // 
+            // PrintStudentGradeReportIDInputTableLayoutArea
+            // 
+            this.PrintStudentGradeReportIDInputTableLayoutArea.ColumnCount = 2;
+            this.PrintStudentGradeReportIDInputTableLayoutArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.PrintStudentGradeReportIDInputTableLayoutArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.PrintStudentGradeReportIDInputTableLayoutArea.Controls.Add(this.PrintGradeReportIDInputLabel, 0, 0);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.Controls.Add(this.PrintGradeReportStudentIDInput, 1, 0);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.Location = new System.Drawing.Point(3, 3);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.Name = "PrintStudentGradeReportIDInputTableLayoutArea";
+            this.PrintStudentGradeReportIDInputTableLayoutArea.RowCount = 1;
+            this.PrintStudentGradeReportIDInputTableLayoutArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PrintStudentGradeReportIDInputTableLayoutArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.PrintStudentGradeReportIDInputTableLayoutArea.Size = new System.Drawing.Size(1010, 666);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.TabIndex = 0;
+            // 
+            // PrintStudentGradeReportButtonsTableLayoutArea
+            // 
+            this.PrintStudentGradeReportButtonsTableLayoutArea.ColumnCount = 2;
+            this.PrintStudentGradeReportButtonsTableLayoutArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PrintStudentGradeReportButtonsTableLayoutArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PrintStudentGradeReportButtonsTableLayoutArea.Controls.Add(this.PrintGradeReportGoBackButton, 1, 0);
+            this.PrintStudentGradeReportButtonsTableLayoutArea.Controls.Add(this.PrintGradeReportPrintButton, 0, 0);
+            this.PrintStudentGradeReportButtonsTableLayoutArea.Location = new System.Drawing.Point(3, 675);
+            this.PrintStudentGradeReportButtonsTableLayoutArea.Name = "PrintStudentGradeReportButtonsTableLayoutArea";
+            this.PrintStudentGradeReportButtonsTableLayoutArea.RowCount = 1;
+            this.PrintStudentGradeReportButtonsTableLayoutArea.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PrintStudentGradeReportButtonsTableLayoutArea.Size = new System.Drawing.Size(1010, 162);
+            this.PrintStudentGradeReportButtonsTableLayoutArea.TabIndex = 1;
+            // 
+            // PrintGradeReportPrintButton
+            // 
+            this.PrintGradeReportPrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.PrintGradeReportPrintButton.Location = new System.Drawing.Point(3, 3);
+            this.PrintGradeReportPrintButton.Name = "PrintGradeReportPrintButton";
+            this.PrintGradeReportPrintButton.Size = new System.Drawing.Size(499, 156);
+            this.PrintGradeReportPrintButton.TabIndex = 0;
+            this.PrintGradeReportPrintButton.Text = "Print";
+            this.PrintGradeReportPrintButton.UseVisualStyleBackColor = true;
+            // 
+            // PrintGradeReportGoBackButton
+            // 
+            this.PrintGradeReportGoBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.PrintGradeReportGoBackButton.Location = new System.Drawing.Point(508, 3);
+            this.PrintGradeReportGoBackButton.Name = "PrintGradeReportGoBackButton";
+            this.PrintGradeReportGoBackButton.Size = new System.Drawing.Size(499, 156);
+            this.PrintGradeReportGoBackButton.TabIndex = 1;
+            this.PrintGradeReportGoBackButton.Text = "Go Back";
+            this.PrintGradeReportGoBackButton.UseVisualStyleBackColor = true;
+            // 
+            // PrintGradeReportIDInputLabel
+            // 
+            this.PrintGradeReportIDInputLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PrintGradeReportIDInputLabel.AutoSize = true;
+            this.PrintGradeReportIDInputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.PrintGradeReportIDInputLabel.Location = new System.Drawing.Point(107, 320);
+            this.PrintGradeReportIDInputLabel.Name = "PrintGradeReportIDInputLabel";
+            this.PrintGradeReportIDInputLabel.Size = new System.Drawing.Size(121, 26);
+            this.PrintGradeReportIDInputLabel.TabIndex = 0;
+            this.PrintGradeReportIDInputLabel.Text = "Student ID:";
+            // 
+            // PrintGradeReportStudentIDInput
+            // 
+            this.PrintGradeReportStudentIDInput.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PrintGradeReportStudentIDInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.PrintGradeReportStudentIDInput.Location = new System.Drawing.Point(339, 317);
+            this.PrintGradeReportStudentIDInput.Name = "PrintGradeReportStudentIDInput";
+            this.PrintGradeReportStudentIDInput.Size = new System.Drawing.Size(668, 32);
+            this.PrintGradeReportStudentIDInput.TabIndex = 1;
+            // 
             // GradeManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 864);
+            this.Controls.Add(this.PrintStudentGradeReportTableLayoutPanel);
+            this.Controls.Add(this.MainMenuTableLayout);
             this.Controls.Add(this.AddGradeTableLayoutPanel);
             this.Controls.Add(this.SearchGradeFormTableLayoutPanel);
-            this.Controls.Add(this.MainMenuTableLayout);
             this.Name = "GradeManagementSystem";
             this.Text = "Student Grade Management System";
             this.MainMenuTableLayout.ResumeLayout(false);
@@ -849,6 +946,10 @@ namespace StudentGradeManagementSystem
             this.SearchGradeCourseNumberInputArea.PerformLayout();
             this.SearchGradeCourseGradeInputArea.ResumeLayout(false);
             this.SearchGradeCourseGradeInputArea.PerformLayout();
+            this.PrintStudentGradeReportTableLayoutPanel.ResumeLayout(false);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.ResumeLayout(false);
+            this.PrintStudentGradeReportIDInputTableLayoutArea.PerformLayout();
+            this.PrintStudentGradeReportButtonsTableLayoutArea.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -911,6 +1012,13 @@ namespace StudentGradeManagementSystem
         private System.Windows.Forms.TextBox SearchGradeCoursePrefixInput;
         private System.Windows.Forms.Label SearchGradeCoursePrefixInputLabel;
         private System.Windows.Forms.Button SearchGradeSubmitButton;
+        private System.Windows.Forms.TableLayoutPanel PrintStudentGradeReportTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel PrintStudentGradeReportIDInputTableLayoutArea;
+        private System.Windows.Forms.TableLayoutPanel PrintStudentGradeReportButtonsTableLayoutArea;
+        private System.Windows.Forms.Button PrintGradeReportPrintButton;
+        private System.Windows.Forms.Label PrintGradeReportIDInputLabel;
+        private System.Windows.Forms.TextBox PrintGradeReportStudentIDInput;
+        private System.Windows.Forms.Button PrintGradeReportGoBackButton;
     }
 }
 

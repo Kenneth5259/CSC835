@@ -15,6 +15,7 @@ namespace StudentGradeManagementSystem
         public GradeManagementSystem()
         {
             InitializeComponent();
+            new DynamicMessageForm("The import was successful.Total Courses Imported: 1, Total grades addes: 30").Show();
         }
 
         private void MainMenuAddButton_Click(object sender, EventArgs e)
@@ -25,12 +26,14 @@ namespace StudentGradeManagementSystem
         private void AddGradeFormSubmitButton_Click(object sender, EventArgs e)
         {
             this.AddGradeTableLayoutPanel.Visible = false;
+            new DynamicMessageForm("").Show();
             
         }
 
         private void SearchGradeSubmitButton_Click(object sender, EventArgs e)
         {
             this.SearchGradeFormTableLayoutPanel.Visible = false;
+            //new DynamicMessageForm("Edit Successful").Show();
             new SearchResultForm().Show();
         }
 
@@ -38,6 +41,11 @@ namespace StudentGradeManagementSystem
         {
             this.SearchGradeFormTableLayoutPanel.Visible = true;
             this.SearchGradeSubmitButton.Enabled = true;
+        }
+
+        private void MainMenuPrintButton_Click(object sender, EventArgs e)
+        {
+            this.PrintStudentGradeReportTableLayoutPanel.Visible = true;
         }
     }
 }

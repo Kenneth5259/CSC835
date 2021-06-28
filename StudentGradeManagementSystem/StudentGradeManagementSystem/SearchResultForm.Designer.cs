@@ -32,8 +32,8 @@ namespace StudentGradeManagementSystem
             this.SearchResultTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.SearchResultsListBox = new System.Windows.Forms.ListBox();
             this.SearchResultsButtonsContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.SearchResultsEditButton = new System.Windows.Forms.Button();
             this.SearchResultsDeleteButton = new System.Windows.Forms.Button();
+            this.SearchResultsEditButton = new System.Windows.Forms.Button();
             this.SearchResultTableLayoutPanel.SuspendLayout();
             this.SearchResultsButtonsContainer.SuspendLayout();
             this.SuspendLayout();
@@ -75,17 +75,6 @@ namespace StudentGradeManagementSystem
             this.SearchResultsButtonsContainer.Size = new System.Drawing.Size(843, 128);
             this.SearchResultsButtonsContainer.TabIndex = 1;
             // 
-            // SearchResultsEditButton
-            // 
-            this.SearchResultsEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SearchResultsEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.SearchResultsEditButton.Location = new System.Drawing.Point(17, 10);
-            this.SearchResultsEditButton.Name = "SearchResultsEditButton";
-            this.SearchResultsEditButton.Size = new System.Drawing.Size(386, 108);
-            this.SearchResultsEditButton.TabIndex = 0;
-            this.SearchResultsEditButton.Text = "Edit";
-            this.SearchResultsEditButton.UseVisualStyleBackColor = true;
-            // 
             // SearchResultsDeleteButton
             // 
             this.SearchResultsDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -96,6 +85,18 @@ namespace StudentGradeManagementSystem
             this.SearchResultsDeleteButton.TabIndex = 1;
             this.SearchResultsDeleteButton.Text = "Delete";
             this.SearchResultsDeleteButton.UseVisualStyleBackColor = true;
+            this.SearchResultsDeleteButton.Click += new System.EventHandler(this.SearchResultsDeleteButton_Click);
+            // 
+            // SearchResultsEditButton
+            // 
+            this.SearchResultsEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchResultsEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.SearchResultsEditButton.Location = new System.Drawing.Point(17, 10);
+            this.SearchResultsEditButton.Name = "SearchResultsEditButton";
+            this.SearchResultsEditButton.Size = new System.Drawing.Size(386, 108);
+            this.SearchResultsEditButton.TabIndex = 0;
+            this.SearchResultsEditButton.Text = "Edit";
+            this.SearchResultsEditButton.UseVisualStyleBackColor = true;
             // 
             // SearchResultForm
             // 
