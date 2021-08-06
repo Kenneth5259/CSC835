@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StudentGradeManagementSystem.Models;
 
 namespace StudentGradeManagementSystem
 {
     public partial class SearchResultForm : Form
     {
         public List<GradeResult> results;
+
+        public event EventHandler OptionButtonPress;
         public SearchResultForm()
         {
             InitializeComponent();
@@ -26,16 +29,55 @@ namespace StudentGradeManagementSystem
             test.CourseNumber = "835";
             test.Grade = "B";
             this.results.Add(test);
+
+            // set the data source
             this.SearchResultsListBox.DataSource = this.results;
+
+            // pass the dynamic string property from the class
             this.SearchResultsListBox.DisplayMember = "getEntireInfo";
 
+        }
+
+        public SearchResultForm(Form parent, List<CompleteGradeRecord> completeGradeRecords)
+        {
+            InitializeComponent();
+            this.results = this.createGradeResultList(completeGradeRecords);
+
+
+            // set the data source
+            this.SearchResultsListBox.DataSource = this.results;
+            this.SearchResultsListBox.DisplayMember = "getEntireInfo";
         }
 
         private void SearchResultsDeleteButton_Click(object sender, EventArgs e)
         {
             new DynamicConfirmationForm("Are you sure you wish to delete? Warning: Deletion is permanent.").Show();
         }
+        private List<GradeResult> createGradeResultList(List<CompleteGradeRecord> completeGradeRecords)
+        {
+
+            // convert each CompleteGradeRecord to a GradeResult object
+            List<GradeResult> results = new List<GradeResult>();
+            foreach(CompleteGradeRecord record in completeGradeRecords)
+            {
+                GradeResult res = new GradeResult();
+                res.Name = record.studentName;
+                res.ID = record.studentId.ToString();
+                res.Semester = record.semester;
+                res.Year = record.year.ToString();
+                res.CoursePrefix = record.coursePrefix;
+                res.CourseNumber = record.coursePrefix;
+                res.Grade = record.grade;
+                results.Add(res);
+            }
+
+            // return the list
+            return results;
+
+        }
     }
+
+    // define the grade result class for the display of search results
     public class GradeResult
     {
         public string Name { get; set; }
