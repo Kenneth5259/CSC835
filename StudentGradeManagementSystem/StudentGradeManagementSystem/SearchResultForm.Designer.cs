@@ -42,23 +42,26 @@ namespace StudentGradeManagementSystem
             // 
             this.SearchResultTableLayoutPanel.ColumnCount = 1;
             this.SearchResultTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SearchResultTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.SearchResultTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.SearchResultTableLayoutPanel.Controls.Add(this.SearchResultsListBox, 0, 0);
             this.SearchResultTableLayoutPanel.Controls.Add(this.SearchResultsButtonsContainer, 0, 1);
-            this.SearchResultTableLayoutPanel.Location = new System.Drawing.Point(12, 12);
+            this.SearchResultTableLayoutPanel.Location = new System.Drawing.Point(16, 15);
+            this.SearchResultTableLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchResultTableLayoutPanel.Name = "SearchResultTableLayoutPanel";
             this.SearchResultTableLayoutPanel.RowCount = 2;
             this.SearchResultTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.SearchResultTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SearchResultTableLayoutPanel.Size = new System.Drawing.Size(849, 666);
+            this.SearchResultTableLayoutPanel.Size = new System.Drawing.Size(1132, 820);
             this.SearchResultTableLayoutPanel.TabIndex = 0;
             // 
             // SearchResultsListBox
             // 
             this.SearchResultsListBox.FormattingEnabled = true;
-            this.SearchResultsListBox.Location = new System.Drawing.Point(3, 3);
+            this.SearchResultsListBox.ItemHeight = 16;
+            this.SearchResultsListBox.Location = new System.Drawing.Point(4, 4);
+            this.SearchResultsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchResultsListBox.Name = "SearchResultsListBox";
-            this.SearchResultsListBox.Size = new System.Drawing.Size(843, 524);
+            this.SearchResultsListBox.Size = new System.Drawing.Size(1123, 644);
             this.SearchResultsListBox.TabIndex = 0;
             // 
             // SearchResultsButtonsContainer
@@ -68,20 +71,22 @@ namespace StudentGradeManagementSystem
             this.SearchResultsButtonsContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SearchResultsButtonsContainer.Controls.Add(this.SearchResultsDeleteButton, 1, 0);
             this.SearchResultsButtonsContainer.Controls.Add(this.SearchResultsEditButton, 0, 0);
-            this.SearchResultsButtonsContainer.Location = new System.Drawing.Point(3, 535);
+            this.SearchResultsButtonsContainer.Location = new System.Drawing.Point(4, 660);
+            this.SearchResultsButtonsContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchResultsButtonsContainer.Name = "SearchResultsButtonsContainer";
             this.SearchResultsButtonsContainer.RowCount = 1;
             this.SearchResultsButtonsContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SearchResultsButtonsContainer.Size = new System.Drawing.Size(843, 128);
+            this.SearchResultsButtonsContainer.Size = new System.Drawing.Size(1124, 156);
             this.SearchResultsButtonsContainer.TabIndex = 1;
             // 
             // SearchResultsDeleteButton
             // 
             this.SearchResultsDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SearchResultsDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.SearchResultsDeleteButton.Location = new System.Drawing.Point(439, 10);
+            this.SearchResultsDeleteButton.Location = new System.Drawing.Point(585, 11);
+            this.SearchResultsDeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchResultsDeleteButton.Name = "SearchResultsDeleteButton";
-            this.SearchResultsDeleteButton.Size = new System.Drawing.Size(386, 108);
+            this.SearchResultsDeleteButton.Size = new System.Drawing.Size(515, 133);
             this.SearchResultsDeleteButton.TabIndex = 1;
             this.SearchResultsDeleteButton.Text = "Delete";
             this.SearchResultsDeleteButton.UseVisualStyleBackColor = true;
@@ -91,19 +96,22 @@ namespace StudentGradeManagementSystem
             // 
             this.SearchResultsEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SearchResultsEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.SearchResultsEditButton.Location = new System.Drawing.Point(17, 10);
+            this.SearchResultsEditButton.Location = new System.Drawing.Point(23, 11);
+            this.SearchResultsEditButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchResultsEditButton.Name = "SearchResultsEditButton";
-            this.SearchResultsEditButton.Size = new System.Drawing.Size(386, 108);
+            this.SearchResultsEditButton.Size = new System.Drawing.Size(515, 133);
             this.SearchResultsEditButton.TabIndex = 0;
             this.SearchResultsEditButton.Text = "Edit";
             this.SearchResultsEditButton.UseVisualStyleBackColor = true;
+            this.SearchResultsEditButton.Click += new System.EventHandler(this.SearchResultsEditButton_Click);
             // 
             // SearchResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 704);
+            this.ClientSize = new System.Drawing.Size(1164, 866);
             this.Controls.Add(this.SearchResultTableLayoutPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SearchResultForm";
             this.Text = "SearchResultForm";
             this.SearchResultTableLayoutPanel.ResumeLayout(false);

@@ -14,6 +14,7 @@ namespace StudentGradeManagementSystem
     public partial class SearchResultForm : Form
     {
         public List<GradeResult> results;
+        public GradeManagementSystem parent;
 
         public event EventHandler OptionButtonPress;
         public SearchResultForm()
@@ -38,11 +39,11 @@ namespace StudentGradeManagementSystem
 
         }
 
-        public SearchResultForm(Form parent, List<CompleteGradeRecord> completeGradeRecords)
+        public SearchResultForm(GradeManagementSystem parent, List<CompleteGradeRecord> completeGradeRecords)
         {
             InitializeComponent();
             this.results = this.createGradeResultList(completeGradeRecords);
-
+            this.parent = parent;
 
             // set the data source
             this.SearchResultsListBox.DataSource = this.results;
@@ -74,6 +75,11 @@ namespace StudentGradeManagementSystem
             // return the list
             return results;
 
+        }
+
+        private void SearchResultsEditButton_Click(object sender, EventArgs e)
+        {
+            this.parent.myMain(3);
         }
     }
 

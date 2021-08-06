@@ -69,11 +69,24 @@ namespace StudentGradeManagementSystem
                 case 2:
                     readSearchOptions();
                     break;
+                case 3:
+                    editGradeRecord();
+                    break;
+                case 4:
+                    deleteGradeRecord();
+                    break;
                 default:
                     break;
             }
         }
+        public void editGradeRecord()
+        {
 
+        }
+        public void deleteGradeRecord()
+        {
+
+        }
         // DFD 2.1
         public void readSearchOptions()
         {
