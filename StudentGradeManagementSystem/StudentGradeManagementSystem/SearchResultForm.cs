@@ -15,6 +15,7 @@ namespace StudentGradeManagementSystem
     {
         public List<GradeResult> results;
         public GradeManagementSystem parent;
+        public RecordData selection;
 
         public event EventHandler OptionButtonPress;
         public SearchResultForm()
@@ -79,6 +80,7 @@ namespace StudentGradeManagementSystem
 
         private void SearchResultsEditButton_Click(object sender, EventArgs e)
         {
+            this.selection = this.SearchResultsListBox.SelectedItem as RecordData;
             this.parent.myMain(3);
         }
     }

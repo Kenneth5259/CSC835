@@ -21,6 +21,7 @@ namespace StudentGradeManagementSystem
 
     public partial class GradeManagementSystem : Form
     {
+        public SearchResultForm searchResultForm;
         public GradeManagementSystem()
         {
             InitializeComponent();
@@ -70,22 +71,14 @@ namespace StudentGradeManagementSystem
                     readSearchOptions();
                     break;
                 case 3:
-                    editGradeRecord();
+                    editAGrade(this.searchResultForm.selection);
                     break;
                 case 4:
-                    deleteGradeRecord();
+                    deleteAGrade(this.searchResultForm.selection);
                     break;
                 default:
                     break;
             }
-        }
-        public void editGradeRecord()
-        {
-
-        }
-        public void deleteGradeRecord()
-        {
-
         }
         // DFD 2.1
         public void readSearchOptions()
@@ -222,8 +215,8 @@ namespace StudentGradeManagementSystem
         {
             if(completeGradeRecords.Count > 0)
             {
-                SearchResultForm searchResultForm = new SearchResultForm(this, completeGradeRecords);
-                searchResultForm.Show();
+                this.searchResultForm = new SearchResultForm(this, completeGradeRecords);
+                this.searchResultForm.Show();
             } else
             {
                 new DynamicMessageForm("Nothing found for the search parameters!").Show();
